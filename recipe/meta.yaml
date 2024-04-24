@@ -59,6 +59,7 @@ outputs:
       build:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
+        - {{ stdlib("c") }}
         - arm-variant * {{ arm_variant_type }}  # [aarch64]
         - patchelf <0.18.0                      # [linux]
       host:
@@ -95,6 +96,7 @@ outputs:
       build:
         - {{ compiler("c") }}
         - {{ compiler("cxx") }}
+        - {{ stdlib("c") }}
         - arm-variant * {{ arm_variant_type }}  # [aarch64]
       host:
         - cuda-version {{ cuda_version }}
